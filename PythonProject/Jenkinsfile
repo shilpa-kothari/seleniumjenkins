@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+        stage('Navigate and Run') {
+            steps {
+                dir('PythonProject') {
+                    bat 'python jenks.py'
+                }
+            }
+        }
+    }
+}
